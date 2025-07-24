@@ -1,0 +1,22 @@
+{
+  "name": "JCI EXchange 2025",
+  "short_name": "JCI EXchange",
+  "description": "JCI EXchange 2025 - Uniting LOMs for Global Impact in Sousse, Tunisia",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0097D7",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
