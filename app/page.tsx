@@ -44,15 +44,14 @@ export default function JCIExchangePage() {
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-[#0097D7] rounded-full flex items-center justify-center">
-              <Globe className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <span className="text-xl font-bold text-[#0A0F29]">
-                JCI EXchange
-              </span>
-              <p className="text-sm text-[#3A67B1]">2025</p>
-            </div>
+            <Image
+              src="/jci_exchange_logo.jpg" // replace with your actual image
+              alt="Sousse cityscape with global connections"
+              priority
+              height={40}
+              width={80}
+              className=""
+            />
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link
@@ -73,39 +72,39 @@ export default function JCIExchangePage() {
             >
               Registration
             </Link>
-            <Link
-              href="#sousse"
-              className="text-sm font-medium hover:text-[#0097D7] transition-colors"
-            >
-              JCI Sousse
-            </Link>
           </nav>
-          <Button className="bg-[#0097D7] hover:bg-[#3A67B1] text-white">
-            Join Now
-          </Button>
+          <Link href="#offers" className="">
+            <Button className="text-sm font-medium bg-[#0097D7] hover:bg-[#3A67B1] text-white">
+              Join Now
+            </Button>
+          </Link>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-[#0097D7]/10 via-[#56BDA3]/5 to-[#EDBE38]/10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0097D7]/20 to-[#3A67B1]/20"></div>
+      <section className="relative py-12 h-[61vh] overflow-hidden">
+        {/* Background image */}
         <Image
-          src="/placeholder.svg?height=600&width=1200"
+          src="/bg_exchange.jpg" // replace with your actual image
           alt="Sousse cityscape with global connections"
           fill
-          className="object-cover opacity-20"
+          priority
+          className="object-contain object-center bg-white"
         />
+        {/* Overlay (optional gradient for text readability) */}
+        <div className="absolute inset-0 bg-white/20"></div>
+
         <div className="relative container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-[#EDBE38] text-[#0A0F29] hover:bg-[#EDBE38]/90 text-sm px-6 py-3 rounded-full">
             🌟 November 1-4, 2025 • Beautiful Sousse, Tunisia 🇹🇳
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#0A0F29] leading-tight">
             Welcome to JCI EXchange 2025!
-            <span className="block text-3xl md:text-5xl bg-gradient-to-r from-[#0097D7] to-[#3A67B1] bg-clip-text text-transparent">
+            <span className="block text-3xl md:text-5xl text-white   ">
               Where Friendships Begin & Dreams Take Flight ✨
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-[#3A67B1] mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-black mb-8 max-w-4xl mx-auto leading-relaxed">
             Join us for 4 amazing days of making new friends, sharing cultures,
             and learning together! We can't wait to welcome you to our beautiful
             Tunisia! 🤗
@@ -597,7 +596,7 @@ export default function JCIExchangePage() {
       </section>
 
       {/* JCI Sousse History */}
-      <section
+      {/* <section
         id="sousse"
         className="py-16 bg-gradient-to-br from-[#0097D7]/5 to-[#56BDA3]/5"
       >
@@ -666,13 +665,7 @@ export default function JCIExchangePage() {
             </div>
 
             <div>
-              {/* <Image
-                src="/placeholder.svg?height=500&width=600"
-                alt="JCI Sousse community activities"
-                width={600}
-                height={500}
-                className="rounded-lg shadow-lg"
-              /> */}
+         
               <NextPlaceholderImage
                 width={600}
                 height={500}
@@ -683,7 +676,7 @@ export default function JCIExchangePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Partners Section */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -731,7 +724,7 @@ export default function JCIExchangePage() {
           {/* Gold Partners */}
           <div className="mb-12">
             <h3 className="text-xl font-semibold text-center mb-8 text-[#EDBE38]">
-              🥇 Gold Partners
+              🥇 Partners
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
               {[1, 2, 3, 4].map((i) => (
@@ -761,7 +754,7 @@ export default function JCIExchangePage() {
           {/* Community Partners */}
           <div>
             <h3 className="text-lg font-semibold text-center mb-8 text-[#56BDA3]">
-              💚 Community Partners
+              💚 Sponsors
             </h3>
             <div className="flex flex-wrap justify-center items-center gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -1047,11 +1040,11 @@ export default function JCIExchangePage() {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-[#56BDA3]" />
-                  <span className="text-gray-300">exchange@jcisousse.org</span>
+                  <span className="text-gray-300">jci.sousse.ong@gmzil.com</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-[#56BDA3]" />
-                  <span className="text-gray-300">+216 XX XXX XXX</span>
+                  <span className="text-gray-300">+216 94 601 833</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 text-[#56BDA3]" />
@@ -1064,29 +1057,24 @@ export default function JCIExchangePage() {
               <h4 className="font-semibold mb-4 text-[#EDBE38]">Follow Us</h4>
               <div className="flex space-x-4">
                 <Link
-                  href="#"
+                  href="https://www.facebook.com/jci.sousse"
                   className="w-8 h-8 bg-[#0097D7] rounded-full flex items-center justify-center hover:bg-[#3A67B1] transition-colors"
                 >
                   <Facebook className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/jcisousse"
                   className="w-8 h-8 bg-[#0097D7] rounded-full flex items-center justify-center hover:bg-[#3A67B1] transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/in/jci-sousse-b74aa91a0/"
                   className="w-8 h-8 bg-[#0097D7] rounded-full flex items-center justify-center hover:bg-[#3A67B1] transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
                 </Link>
-                <Link
-                  href="#"
-                  className="w-8 h-8 bg-[#0097D7] rounded-full flex items-center justify-center hover:bg-[#3A67B1] transition-colors"
-                >
-                  <Twitter className="w-4 h-4" />
-                </Link>
+              
               </div>
             </div>
           </div>
