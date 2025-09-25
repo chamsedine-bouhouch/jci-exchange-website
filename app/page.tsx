@@ -1,9 +1,14 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Calendar,
   MapPin,
@@ -22,14 +27,19 @@ import {
   Award,
   Building,
   Heart,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import NextPlaceholderImage from "@/components/NextPlaceholderImage";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 export default function JCIExchangePage() {
   return (
-    <div className="min-h-screen bg-background" style={{ fontFamily: "Open Sans, sans-serif" }}>
+    <div
+      className="min-h-screen bg-background"
+      style={{ fontFamily: "Open Sans, sans-serif" }}
+    >
+      <ScrollToTop />
       {/* Header */}
       <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -38,25 +48,41 @@ export default function JCIExchangePage() {
               <Globe className="w-6 h-6 text-white" />
             </div>
             <div>
-              <span className="text-xl font-bold text-[#0A0F29]">JCI EXchange</span>
+              <span className="text-xl font-bold text-[#0A0F29]">
+                JCI EXchange
+              </span>
               <p className="text-sm text-[#3A67B1]">2025</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#about" className="text-sm font-medium hover:text-[#0097D7] transition-colors">
+            <Link
+              href="#about"
+              className="text-sm font-medium hover:text-[#0097D7] transition-colors"
+            >
               About
             </Link>
-            <Link href="#program" className="text-sm font-medium hover:text-[#0097D7] transition-colors">
+            <Link
+              href="#program"
+              className="text-sm font-medium hover:text-[#0097D7] transition-colors"
+            >
               Program
             </Link>
-            <Link href="#offers" className="text-sm font-medium hover:text-[#0097D7] transition-colors">
+            <Link
+              href="#offers"
+              className="text-sm font-medium hover:text-[#0097D7] transition-colors"
+            >
               Registration
             </Link>
-            <Link href="#sousse" className="text-sm font-medium hover:text-[#0097D7] transition-colors">
+            <Link
+              href="#sousse"
+              className="text-sm font-medium hover:text-[#0097D7] transition-colors"
+            >
               JCI Sousse
             </Link>
           </nav>
-          <Button className="bg-[#0097D7] hover:bg-[#3A67B1] text-white">Join Now</Button>
+          <Button className="bg-[#0097D7] hover:bg-[#3A67B1] text-white">
+            Join Now
+          </Button>
         </div>
       </header>
 
@@ -80,8 +106,9 @@ export default function JCIExchangePage() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-[#3A67B1] mb-8 max-w-4xl mx-auto leading-relaxed">
-            Join us for 4 amazing days of making new friends, sharing cultures, and learning together! We can't wait to
-            welcome you to our beautiful Tunisia! 🤗
+            Join us for 4 amazing days of making new friends, sharing cultures,
+            and learning together! We can't wait to welcome you to our beautiful
+            Tunisia! 🤗
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -107,11 +134,14 @@ export default function JCIExchangePage() {
       <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">What Makes JCI EXchange Special? 💫</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">
+              What Makes JCI EXchange Special? 💫
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Every two years, we bring together amazing JCI members from all four corners of the world for an
-              unforgettable experience! Think of it as a big, friendly reunion where everyone's invited to make new
-              friends and create lasting memories. 🌍❤️
+              Every two years, we bring together amazing JCI members from all
+              four corners of the world for an unforgettable experience! Think
+              of it as a big, friendly reunion where everyone's invited to make
+              new friends and create lasting memories. 🌍❤️
             </p>
           </div>
 
@@ -121,10 +151,12 @@ export default function JCIExchangePage() {
                 <div className="w-16 h-16 bg-[#0097D7]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-[#0097D7]" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">🤝 Making Friends Worldwide</h3>
+                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                  🤝 Making Friends Worldwide
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Meet incredible people from every continent! Share stories, laugh together, and build friendships that
-                  last a lifetime
+                  Meet incredible people from every continent! Share stories,
+                  laugh together, and build friendships that last a lifetime
                 </p>
               </CardContent>
             </Card>
@@ -134,10 +166,12 @@ export default function JCIExchangePage() {
                 <div className="w-16 h-16 bg-[#3A67B1]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Theater className="w-8 h-8 text-[#3A67B1]" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">🎭 Celebrating Our Cultures</h3>
+                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                  🎭 Celebrating Our Cultures
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Share your traditions, taste new foods, learn fun dances, and discover the beautiful diversity of our
-                  world!
+                  Share your traditions, taste new foods, learn fun dances, and
+                  discover the beautiful diversity of our world!
                 </p>
               </CardContent>
             </Card>
@@ -147,10 +181,12 @@ export default function JCIExchangePage() {
                 <div className="w-16 h-16 bg-[#56BDA3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="w-8 h-8 text-[#56BDA3]" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">📚 Learning & Growing Together</h3>
+                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                  📚 Learning & Growing Together
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Join fun workshops, inspiring talks, and hands-on activities that help you grow personally and
-                  professionally
+                  Join fun workshops, inspiring talks, and hands-on activities
+                  that help you grow personally and professionally
                 </p>
               </CardContent>
             </Card>
@@ -160,10 +196,12 @@ export default function JCIExchangePage() {
                 <div className="w-16 h-16 bg-[#EDBE38]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Handshake className="w-8 h-8 text-[#EDBE38]" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">🤗 Strengthening Our JCI Family</h3>
+                <h3 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                  🤗 Strengthening Our JCI Family
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Feel the warmth of our global JCI community and discover how connected we all are, no matter where
-                  we're from
+                  Feel the warmth of our global JCI community and discover how
+                  connected we all are, no matter where we're from
                 </p>
               </CardContent>
             </Card>
@@ -172,13 +210,18 @@ export default function JCIExchangePage() {
       </section>
 
       {/* Program Section */}
-      <section id="program" className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section
+        id="program"
+        className="py-16 bg-gradient-to-br from-gray-50 to-blue-50"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">Your Amazing 4-Day Adventure! 🎊</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">
+              Your Amazing 4-Day Adventure! 🎊
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We've planned something special for every moment! Get ready for the most fun and meaningful four days of
-              your year!
+              We've planned something special for every moment! Get ready for
+              the most fun and meaningful four days of your year!
             </p>
           </div>
 
@@ -190,36 +233,87 @@ export default function JCIExchangePage() {
                   <Calendar className="w-5 h-5" />
                   <span>Day 1 - Nov 1st</span>
                 </CardTitle>
-                <CardDescription className="text-blue-100">Arrival & Welcome</CardDescription>
+                <CardDescription className="text-blue-100">
+                  Arrival & Welcome
+                </CardDescription>
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
+                  {/* Morning */}
+                  <p className="font-medium text-lg text-center"> Morning </p>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#0097D7] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">Arrival & Hotel Check-in</p>
-                      <p className="text-xs text-gray-600">Welcome to Sousse</p>
+                      <p className="font-medium text-sm">
+                        Arrival of international participants
+                      </p>
+                      {/* <p className="text-xs text-gray-600">Welcome to Sousse</p> */}
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#3A67B1] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">Opening Ceremony</p>
-                      <p className="text-xs text-gray-600">Official event launch</p>
+                      <p className="font-medium text-sm">
+                        Check-in at hotel & welcome package distribution
+                      </p>
+                      {/* <p className="text-xs text-gray-600">
+                        Official event launch
+                      </p> */}
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">City Tour & Networking</p>
-                      <p className="text-xs text-gray-600">Medina, Ribat, Port El Kantaoui</p>
+                      <p className="font-medium text-sm">
+                        Casual networking breakfast
+                      </p>
+                      {/* <p className="text-xs text-gray-600">
+                        Medina, Ribat, Port El Kantaoui
+                      </p> */}
+                    </div>
+                  </div>
+                  {/* Afternoon */}
+                  <p className="font-medium text-lg text-center"> Afternoon </p>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        Opening Ceremony & Introduction
+                      </p>
+                      {/* <p className="text-xs text-gray-600">
+                        Traditional Tunisian cuisine
+                      </p> */}
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">Welcome Lunch</p>
-                      <p className="text-xs text-gray-600">Traditional Tunisian cuisine</p>
+                      <p className="font-medium text-sm">
+                        Session Presentation of JCI Sousse & visiting LOMs
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        Guided City Tour of SousseVisit to the Medina (UNESCO
+                        site), Ribat,
+                      </p>
+                    </div>
+                  </div>
+                  {/* Evening : */}
+                  <p className="font-medium text-lg text-center"> Evening : </p>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        Diner with past presidents and senators
+                      </p>
+                      {/* <p className="text-xs text-gray-600">
+                        Traditional Tunisian cuisine
+                      </p> */}
                     </div>
                   </div>
                 </div>
@@ -233,36 +327,52 @@ export default function JCIExchangePage() {
                   <BookOpen className="w-5 h-5" />
                   <span>Day 2 - Nov 2nd</span>
                 </CardTitle>
-                <CardDescription className="text-blue-100">Learning & Development</CardDescription>
+                <CardDescription className="text-blue-100">
+                  Learning & Development
+                </CardDescription>
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#3A67B1] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">JCI Talks (TED-style)</p>
-                      <p className="text-xs text-gray-600">Inspiring presentations</p>
+                      <p className="font-medium text-sm">
+                        JCI Talks (TED-style)
+                      </p>
+                      <p className="text-xs text-gray-600">
+                        Inspiring presentations
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">Soft Skills Training</p>
-                      <p className="text-xs text-gray-600">Professional development</p>
+                      <p className="font-medium text-sm">
+                        Soft Skills Training
+                      </p>
+                      <p className="text-xs text-gray-600">
+                        Professional development
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">Business Training Sessions</p>
-                      <p className="text-xs text-gray-600">Practical workshops</p>
+                      <p className="font-medium text-sm">
+                        Business Training Sessions
+                      </p>
+                      <p className="text-xs text-gray-600">
+                        Practical workshops
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#0097D7] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">JCI Future Forum</p>
-                      <p className="text-xs text-gray-600">+ Networking night</p>
+                      <p className="text-xs text-gray-600">
+                        + Networking night
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -276,7 +386,9 @@ export default function JCIExchangePage() {
                   <Heart className="w-5 h-5" />
                   <span>Day 3 - Nov 3rd</span>
                 </CardTitle>
-                <CardDescription className="text-green-100">Action & Friendship</CardDescription>
+                <CardDescription className="text-green-100">
+                  Action & Friendship
+                </CardDescription>
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
@@ -284,21 +396,27 @@ export default function JCIExchangePage() {
                     <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">JCI Action Day</p>
-                      <p className="text-xs text-gray-600">Community projects</p>
+                      <p className="text-xs text-gray-600">
+                        Community projects
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">JCI Friendship</p>
-                      <p className="text-xs text-gray-600">Karaoke & escape room</p>
+                      <p className="text-xs text-gray-600">
+                        Karaoke & escape room
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#0097D7] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">Closing Ceremony</p>
-                      <p className="text-xs text-gray-600">Celebration & awards</p>
+                      <p className="text-xs text-gray-600">
+                        Celebration & awards
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -312,7 +430,9 @@ export default function JCIExchangePage() {
                   <MapPin className="w-5 h-5" />
                   <span>Day 4 - Nov 4th</span>
                 </CardTitle>
-                <CardDescription className="text-yellow-100">Departure & Congress</CardDescription>
+                <CardDescription className="text-yellow-100">
+                  Departure & Congress
+                </CardDescription>
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
@@ -320,14 +440,18 @@ export default function JCIExchangePage() {
                     <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">Hotel Checkout</p>
-                      <p className="text-xs text-gray-600">Final preparations</p>
+                      <p className="text-xs text-gray-600">
+                        Final preparations
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#0A0F29] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">Travel to Tunis</p>
-                      <p className="text-xs text-gray-600">World Congress journey</p>
+                      <p className="text-xs text-gray-600">
+                        World Congress journey
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -341,16 +465,22 @@ export default function JCIExchangePage() {
       <section id="offers" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">Ready to Join Our Family? 🏠💕</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">
+              Ready to Join Our Family? 🏠💕
+            </h2>
             <div className="inline-block bg-[#EDBE38]/10 border border-[#EDBE38] rounded-full px-6 py-3 mb-6">
-              <p className="text-[#0A0F29] font-medium">💬 Let's chat! We're here to help with everything</p>
+              <p className="text-[#0A0F29] font-medium">
+                💬 Let's chat! We're here to help with everything
+              </p>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Offers */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#0A0F29] mb-6">Sweet Deals Just for You! 🎁</h3>
+              <h3 className="text-2xl font-bold text-[#0A0F29] mb-6">
+                Sweet Deals Just for You! 🎁
+              </h3>
 
               <Card className="border-l-4 border-l-[#56BDA3] hover:shadow-lg transition-all">
                 <CardContent className="p-6">
@@ -359,12 +489,17 @@ export default function JCIExchangePage() {
                       <Users className="w-6 h-6 text-[#56BDA3]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">🎉 Bring Your Squad & Save!</h4>
+                      <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                        🎉 Bring Your Squad & Save!
+                      </h4>
                       <p className="text-gray-600 mb-2">
-                        Bring 15+ friends from your LOM and we'll treat <strong>5 of you to free accommodation!</strong>
+                        Bring 15+ friends from your LOM and we'll treat{" "}
+                        <strong>5 of you to free accommodation!</strong>
                         The more the merrier!
                       </p>
-                      <Badge className="bg-[#56BDA3] text-white">Friends Discount</Badge>
+                      <Badge className="bg-[#56BDA3] text-white">
+                        Friends Discount
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -377,12 +512,17 @@ export default function JCIExchangePage() {
                       <Building className="w-6 h-6 text-[#0097D7]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">💰 Super Affordable!</h4>
+                      <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                        💰 Super Affordable!
+                      </h4>
                       <p className="text-gray-600 mb-2">
-                        Just <strong>$150</strong> covers everything - your cozy hotel room, delicious meals, and all
-                        activities! What a bargain!
+                        Just <strong>$150</strong> covers everything - your cozy
+                        hotel room, delicious meals, and all activities! What a
+                        bargain!
                       </p>
-                      <Badge className="bg-[#0097D7] text-white">All-Inclusive Deal</Badge>
+                      <Badge className="bg-[#0097D7] text-white">
+                        All-Inclusive Deal
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -395,11 +535,16 @@ export default function JCIExchangePage() {
                       <BookOpen className="w-6 h-6 text-[#3A67B1]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">🌟 Learn from the Best!</h4>
+                      <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                        🌟 Learn from the Best!
+                      </h4>
                       <p className="text-gray-600 mb-2">
-                        Amazing trainers from LOMs around the world will share their wisdom and experience with you!
+                        Amazing trainers from LOMs around the world will share
+                        their wisdom and experience with you!
                       </p>
-                      <Badge className="bg-[#3A67B1] text-white">World-Class Learning</Badge>
+                      <Badge className="bg-[#3A67B1] text-white">
+                        World-Class Learning
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -426,17 +571,24 @@ export default function JCIExchangePage() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="Enter your email" />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="participants">Number of Participants</Label>
-                    <Input id="participants" type="number" placeholder="How many will attend?" />
+                    <Input
+                      id="participants"
+                      type="number"
+                      placeholder="How many will attend?"
+                    />
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Any questions or special requirements?" rows={4} />
-                  </div>
-                  <Button className="w-full bg-[#0097D7] hover:bg-[#3A67B1] text-white">Submit Registration</Button>
+
+                  <Button className="w-full bg-[#0097D7] hover:bg-[#3A67B1] text-white">
+                    Submit Registration
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -445,20 +597,28 @@ export default function JCIExchangePage() {
       </section>
 
       {/* JCI Sousse History */}
-      <section id="sousse" className="py-16 bg-gradient-to-br from-[#0097D7]/5 to-[#56BDA3]/5">
+      <section
+        id="sousse"
+        className="py-16 bg-gradient-to-br from-[#0097D7]/5 to-[#56BDA3]/5"
+      >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0A0F29]">Meet Your Hosts - JCI Sousse! 👋</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0A0F29]">
+                Meet Your Hosts - JCI Sousse! 👋
+              </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#0097D7]/10 rounded-full flex items-center justify-center">
                     <Calendar className="w-6 h-6 text-[#0097D7]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-[#0A0F29]">🎂 Celebrating Since 1963!</h3>
+                    <h3 className="font-semibold text-lg text-[#0A0F29]">
+                      🎂 Celebrating Since 1963!
+                    </h3>
                     <p className="text-gray-600">
-                      We've been spreading joy and making positive changes for over 62 wonderful years!
+                      We've been spreading joy and making positive changes for
+                      over 62 wonderful years!
                     </p>
                   </div>
                 </div>
@@ -468,9 +628,12 @@ export default function JCIExchangePage() {
                     <Star className="w-6 h-6 text-[#3A67B1]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-[#0A0F29]">🏆 Proud Pioneers</h3>
+                    <h3 className="font-semibold text-lg text-[#0A0F29]">
+                      🏆 Proud Pioneers
+                    </h3>
                     <p className="text-gray-600">
-                      We were the very first LOM after JCI Tunisia - talk about being trailblazers!
+                      We were the very first LOM after JCI Tunisia - talk about
+                      being trailblazers!
                     </p>
                   </div>
                 </div>
@@ -480,9 +643,12 @@ export default function JCIExchangePage() {
                     <Award className="w-6 h-6 text-[#56BDA3]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-[#0A0F29]">🌍 Experienced Event Hosts</h3>
+                    <h3 className="font-semibold text-lg text-[#0A0F29]">
+                      🌍 Experienced Event Hosts
+                    </h3>
                     <p className="text-gray-600">
-                      We rocked CAMEC 2017 and can't wait to create more magical memories with you!
+                      We rocked CAMEC 2017 and can't wait to create more magical
+                      memories with you!
                     </p>
                   </div>
                 </div>
@@ -490,19 +656,28 @@ export default function JCIExchangePage() {
 
               <div className="mt-8 p-6 bg-white rounded-lg shadow-sm border-l-4 border-l-[#EDBE38]">
                 <p className="text-gray-700 leading-relaxed">
-                  💕 We're not just your hosts - we're your friends! Our hearts are full of excitement to welcome you to
-                  our beautiful Tunisia. Get ready for the warmest hugs, the biggest smiles, and memories that will last
-                  forever. We promise you'll leave feeling like part of our family!
+                  💕 We're not just your hosts - we're your friends! Our hearts
+                  are full of excitement to welcome you to our beautiful
+                  Tunisia. Get ready for the warmest hugs, the biggest smiles,
+                  and memories that will last forever. We promise you'll leave
+                  feeling like part of our family!
                 </p>
               </div>
             </div>
 
             <div>
-              <Image
+              {/* <Image
                 src="/placeholder.svg?height=500&width=600"
                 alt="JCI Sousse community activities"
                 width={600}
                 height={500}
+                className="rounded-lg shadow-lg"
+              /> */}
+              <NextPlaceholderImage
+                width={600}
+                height={500}
+                text="JCI Sousse community activities"
+                alt="JCI Sousse community"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -514,21 +689,35 @@ export default function JCIExchangePage() {
       <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">Our Amazing Partners! 🤝</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">
+              Our Amazing Partners! 🤝
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're so grateful for these incredible organizations who believe in our mission and help make JCI EXchange
-              possible!
+              We're so grateful for these incredible organizations who believe
+              in our mission and help make JCI EXchange possible!
             </p>
           </div>
 
           {/* Platinum Partners */}
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold text-center mb-8 text-[#3A67B1]">✨ Platinum Partners</h3>
+            <h3 className="text-2xl font-semibold text-center mb-8 text-[#3A67B1]">
+              ✨ Platinum Partners
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
               {[1, 2, 3].map((i) => (
-                <Card key={i} className="p-6 hover:shadow-lg transition-all hover:scale-105 bg-white">
-                  <Image
+                <Card
+                  key={i}
+                  className="p-6 hover:shadow-lg transition-all hover:scale-105 bg-white"
+                >
+                  {/* <Image
                     src={`/placeholder.svg?height=100&width=200&query=Platinum Partner ${i}`}
+                    alt={`Platinum Partner ${i}`}
+                    width={200}
+                    height={100}
+                    className="opacity-80 hover:opacity-100 transition-opacity mx-auto"
+                  /> */}
+                  <NextPlaceholderImage
+                    text={`Platinum Partner ${i}`}
                     alt={`Platinum Partner ${i}`}
                     width={200}
                     height={100}
@@ -541,12 +730,24 @@ export default function JCIExchangePage() {
 
           {/* Gold Partners */}
           <div className="mb-12">
-            <h3 className="text-xl font-semibold text-center mb-8 text-[#EDBE38]">🥇 Gold Partners</h3>
+            <h3 className="text-xl font-semibold text-center mb-8 text-[#EDBE38]">
+              🥇 Gold Partners
+            </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
               {[1, 2, 3, 4].map((i) => (
-                <Card key={i} className="p-4 hover:shadow-md transition-all hover:scale-105 bg-white">
-                  <Image
+                <Card
+                  key={i}
+                  className="p-4 hover:shadow-md transition-all hover:scale-105 bg-white"
+                >
+                  {/* <Image
                     src={`/placeholder.svg?height=80&width=150&query=Gold Partner ${i}`}
+                    alt={`Gold Partner ${i}`}
+                    width={150}
+                    height={80}
+                    className="opacity-70 hover:opacity-100 transition-opacity mx-auto"
+                  /> */}{" "}
+                  <NextPlaceholderImage
+                    text={`Gold Partner ${i}`}
                     alt={`Gold Partner ${i}`}
                     width={150}
                     height={80}
@@ -559,12 +760,22 @@ export default function JCIExchangePage() {
 
           {/* Community Partners */}
           <div>
-            <h3 className="text-lg font-semibold text-center mb-8 text-[#56BDA3]">💚 Community Partners</h3>
+            <h3 className="text-lg font-semibold text-center mb-8 text-[#56BDA3]">
+              💚 Community Partners
+            </h3>
             <div className="flex flex-wrap justify-center items-center gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
-                <Image
+                // <Image
+                //   key={i}
+                //   src={`/placeholder.svg?height=60&width=120&query=Community Partner ${i}`}
+                //   alt={`Community Partner ${i}`}
+                //   width={120}
+                //   height={60}
+                //   className="opacity-60 hover:opacity-90 transition-opacity"
+                // />
+                <NextPlaceholderImage
                   key={i}
-                  src={`/placeholder.svg?height=60&width=120&query=Community Partner ${i}`}
+                  text={`Partner ${i}`}
                   alt={`Community Partner ${i}`}
                   width={120}
                   height={60}
@@ -575,8 +786,12 @@ export default function JCIExchangePage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 italic">💕 Want to partner with us? We'd love to hear from you!</p>
-            <Button className="mt-4 bg-[#0097D7] hover:bg-[#3A67B1] text-white">Become a Partner</Button>
+            <p className="text-gray-600 italic">
+              💕 Want to partner with us? We'd love to hear from you!
+            </p>
+            <Button className="mt-4 bg-[#0097D7] hover:bg-[#3A67B1] text-white">
+              Become a Partner
+            </Button>
           </div>
         </div>
       </section>
@@ -585,16 +800,19 @@ export default function JCIExchangePage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">Welcome to Beautiful Sousse! 🏖️✨</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0F29]">
+              Welcome to Beautiful Sousse! 🏖️✨
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Get ready to fall in love with our magical Mediterranean city - where ancient history meets modern charm!
+              Get ready to fall in love with our magical Mediterranean city -
+              where ancient history meets modern charm!
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <Image
-                src="/placeholder.svg?height=400&width=600"
+              <NextPlaceholderImage
+                text="Sousse Medina and coastline"
                 alt="Sousse Medina and coastline"
                 width={600}
                 height={400}
@@ -602,7 +820,9 @@ export default function JCIExchangePage() {
               />
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-[#0A0F29]">Why You'll Love Sousse! 💙</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[#0A0F29]">
+                Why You'll Love Sousse! 💙
+              </h3>
               <div className="space-y-6">
                 <Card className="p-4 border-l-4 border-l-[#0097D7] hover:shadow-md transition-all">
                   <div className="flex items-start space-x-3">
@@ -610,10 +830,12 @@ export default function JCIExchangePage() {
                       <Building className="w-4 h-4 text-[#0097D7]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#0A0F29]">🏛️ UNESCO World Heritage Magic</h4>
+                      <h4 className="font-semibold text-[#0A0F29]">
+                        🏛️ UNESCO World Heritage Magic
+                      </h4>
                       <p className="text-gray-600 text-sm">
-                        Step into our enchanting Medina - a living museum where every corner tells a story spanning over
-                        1,000 years!
+                        Step into our enchanting Medina - a living museum where
+                        every corner tells a story spanning over 1,000 years!
                       </p>
                     </div>
                   </div>
@@ -625,10 +847,13 @@ export default function JCIExchangePage() {
                       <MapPin className="w-4 h-4 text-[#3A67B1]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#0A0F29]">🌊 Mediterranean Paradise</h4>
+                      <h4 className="font-semibold text-[#0A0F29]">
+                        🌊 Mediterranean Paradise
+                      </h4>
                       <p className="text-gray-600 text-sm">
-                        Crystal blue waters, golden sandy beaches, and breathtaking sunsets that will make your
-                        Instagram followers jealous!
+                        Crystal blue waters, golden sandy beaches, and
+                        breathtaking sunsets that will make your Instagram
+                        followers jealous!
                       </p>
                     </div>
                   </div>
@@ -640,10 +865,13 @@ export default function JCIExchangePage() {
                       <Heart className="w-4 h-4 text-[#56BDA3]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#0A0F29]">🤗 World-Famous Hospitality</h4>
+                      <h4 className="font-semibold text-[#0A0F29]">
+                        🤗 World-Famous Hospitality
+                      </h4>
                       <p className="text-gray-600 text-sm">
-                        Our warm hearts and genuine smiles are legendary throughout Tunisia - you'll feel at home from
-                        the moment you arrive!
+                        Our warm hearts and genuine smiles are legendary
+                        throughout Tunisia - you'll feel at home from the moment
+                        you arrive!
                       </p>
                     </div>
                   </div>
@@ -655,10 +883,13 @@ export default function JCIExchangePage() {
                       <Star className="w-4 h-4 text-[#EDBE38]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#0A0F29]">✨ Perfect Event Destination</h4>
+                      <h4 className="font-semibold text-[#0A0F29]">
+                        ✨ Perfect Event Destination
+                      </h4>
                       <p className="text-gray-600 text-sm">
-                        Modern facilities meet ancient charm - the ideal backdrop for creating unforgettable memories
-                        with friends from around the world!
+                        Modern facilities meet ancient charm - the ideal
+                        backdrop for creating unforgettable memories with
+                        friends from around the world!
                       </p>
                     </div>
                   </div>
@@ -673,10 +904,12 @@ export default function JCIExchangePage() {
               <div className="w-16 h-16 bg-[#0097D7]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building className="w-8 h-8 text-[#0097D7]" />
               </div>
-              <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">Historic Medina</h4>
+              <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                Historic Medina
+              </h4>
               <p className="text-gray-600 text-sm">
-                Wander through narrow cobblestone streets filled with traditional crafts, aromatic spices, and centuries
-                of history
+                Wander through narrow cobblestone streets filled with
+                traditional crafts, aromatic spices, and centuries of history
               </p>
             </Card>
 
@@ -684,9 +917,12 @@ export default function JCIExchangePage() {
               <div className="w-16 h-16 bg-[#56BDA3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-[#56BDA3]" />
               </div>
-              <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">Port El Kantaoui</h4>
+              <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                Port El Kantaoui
+              </h4>
               <p className="text-gray-600 text-sm">
-                A stunning marina resort with luxury yachts, charming cafes, and the perfect spot for sunset photos
+                A stunning marina resort with luxury yachts, charming cafes, and
+                the perfect spot for sunset photos
               </p>
             </Card>
 
@@ -694,16 +930,23 @@ export default function JCIExchangePage() {
               <div className="w-16 h-16 bg-[#EDBE38]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-[#EDBE38]" />
               </div>
-              <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">Ribat Fortress</h4>
+              <h4 className="font-semibold text-lg mb-2 text-[#0A0F29]">
+                Ribat Fortress
+              </h4>
               <p className="text-gray-600 text-sm">
-                An ancient fortress with panoramic views of the Mediterranean - perfect for those epic group photos!
+                An ancient fortress with panoramic views of the Mediterranean -
+                perfect for those epic group photos!
               </p>
             </Card>
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-gray-600 mb-4">🎥 Can't wait to explore? Check out what awaits you in Sousse!</p>
-            <Button className="bg-[#56BDA3] hover:bg-[#3A67B1] text-white">Watch City Tour Video</Button>
+            <p className="text-lg text-gray-600 mb-4">
+              🎥 Can't wait to explore? Check out what awaits you in Sousse!
+            </p>
+            <Button className="bg-[#56BDA3] hover:bg-[#3A67B1] text-white">
+              Watch City Tour Video
+            </Button>
           </div>
         </div>
       </section>
@@ -712,10 +955,14 @@ export default function JCIExchangePage() {
       <section className="py-16 bg-gradient-to-r from-[#0097D7] to-[#56BDA3] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 text-center relative">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Adventure Awaits! 🚀✨</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Your Adventure Awaits! 🚀✨
+          </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Don't let this incredible opportunity slip away! Join hundreds of amazing JCI members for the experience of
-            a lifetime in beautiful Tunisia. We're counting down the days until we can welcome you with open arms! 🤗
+            Don't let this incredible opportunity slip away! Join hundreds of
+            amazing JCI members for the experience of a lifetime in beautiful
+            Tunisia. We're counting down the days until we can welcome you with
+            open arms! 🤗
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -750,7 +997,8 @@ export default function JCIExchangePage() {
                 </div>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Uniting LOMs from around the world for networking, cultural exchange, and international training.
+                Uniting LOMs from around the world for networking, cultural
+                exchange, and international training.
               </p>
             </div>
 
@@ -758,22 +1006,34 @@ export default function JCIExchangePage() {
               <h4 className="font-semibold mb-4 text-[#EDBE38]">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="#about" className="text-gray-300 hover:text-[#0097D7] transition-colors">
+                  <Link
+                    href="#about"
+                    className="text-gray-300 hover:text-[#0097D7] transition-colors"
+                  >
                     About Event
                   </Link>
                 </li>
                 <li>
-                  <Link href="#program" className="text-gray-300 hover:text-[#0097D7] transition-colors">
+                  <Link
+                    href="#program"
+                    className="text-gray-300 hover:text-[#0097D7] transition-colors"
+                  >
                     Program
                   </Link>
                 </li>
                 <li>
-                  <Link href="#offers" className="text-gray-300 hover:text-[#0097D7] transition-colors">
+                  <Link
+                    href="#offers"
+                    className="text-gray-300 hover:text-[#0097D7] transition-colors"
+                  >
                     Registration
                   </Link>
                 </li>
                 <li>
-                  <Link href="#sousse" className="text-gray-300 hover:text-[#0097D7] transition-colors">
+                  <Link
+                    href="#sousse"
+                    className="text-gray-300 hover:text-[#0097D7] transition-colors"
+                  >
                     JCI Sousse
                   </Link>
                 </li>
@@ -781,7 +1041,9 @@ export default function JCIExchangePage() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4 text-[#EDBE38]">Contact Info</h4>
+              <h4 className="font-semibold mb-4 text-[#EDBE38]">
+                Contact Info
+              </h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-[#56BDA3]" />
@@ -831,11 +1093,12 @@ export default function JCIExchangePage() {
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2025 JCI Sousse. All rights reserved. | JCI EXchange 2025 - Uniting LOMs for Global Impact
+              &copy; 2025 JCI Sousse. All rights reserved. | JCI EXchange 2025 -
+              Uniting LOMs for Global Impact
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
