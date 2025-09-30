@@ -32,7 +32,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NextPlaceholderImage from "@/components/NextPlaceholderImage";
 import { ScrollToTop } from "@/components/scroll-to-top";
-
+import SousseCarousel from '@/components/SousseCarousel'
 export default function JCIExchangePage() {
   return (
     <div
@@ -755,28 +755,25 @@ export default function JCIExchangePage() {
             <h3 className="text-2xl font-semibold text-center mb-8 text-[#3A67B1]">
               ✨ Platinum Partners
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
-              {[1, 2, 3].map((i) => (
-                <Card
-                  key={i}
-                  className="p-6 hover:shadow-lg transition-all hover:scale-105 bg-white"
-                >
-                  {/* <Image
-                    src={`/placeholder.svg?height=100&width=200&query=Platinum Partner ${i}`}
-                    alt={`Platinum Partner ${i}`}
-                    width={200}
-                    height={100}
-                    className="opacity-80 hover:opacity-100 transition-opacity mx-auto"
-                  /> */}
-                  <NextPlaceholderImage
-                    text={`Platinum Partner ${i}`}
-                    alt={`Platinum Partner ${i}`}
-                    width={200}
-                    height={100}
-                    className="opacity-80 hover:opacity-100 transition-opacity mx-auto"
-                  />
-                </Card>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-8 items-center justify-items-center">
+              <Card className="p-6 hover:shadow-lg transition-all hover:scale-105 bg-white">
+                <Image
+                  src={`/cankaya.png?height=100&width=200`}
+                  alt="Jci Cankaya"
+                  width={400}
+                  height={200}
+                  className="opacity-80 hover:opacity-100 transition-opacity mx-auto"
+                />
+              </Card>
+              <Card className="p-6 hover:shadow-lg transition-all hover:scale-105 bg-white">
+                <Image
+                  src={`/saint-etienne.png?height=100&width=200`}
+                  alt="Jci Saint Etienne"
+                  width={400}
+                  height={200}
+                  className="opacity-80 hover:opacity-100 transition-opacity mx-auto"
+                />
+              </Card>
             </div>
           </div>
 
@@ -856,13 +853,14 @@ export default function JCIExchangePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <NextPlaceholderImage
-                text="Sousse Medina and coastline"
+              {/* <Image
+                src={`/sousse-medina-shopping-1.webp?height=60&width=120`}
                 alt="Sousse Medina and coastline"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
-              />
+              /> */}
+              <SousseCarousel></SousseCarousel>
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-6 text-[#0A0F29]">
