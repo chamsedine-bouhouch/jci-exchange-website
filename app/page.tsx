@@ -45,7 +45,7 @@ export default function JCIExchangePage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Image
-              src="/jci_exchange_logo.jpg" // replace with your actual image
+              src="/jci_exchange_logo.jpg"
               alt="Sousse cityscape with global connections"
               priority
               height={40}
@@ -89,7 +89,7 @@ export default function JCIExchangePage() {
           alt="Sousse cityscape with global connections"
           fill
           priority
-          className="object-contain object-center bg-white"
+          className="object-cover object-center"
         />
         {/* Overlay (optional gradient for text readability) */}
         <div className="absolute inset-0 bg-white/20"></div>
