@@ -82,7 +82,7 @@ export default function JCIExchangePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-12 h-[61vh] overflow-hidden">
+      <section className="relative py-12  overflow-hidden">
         {/* Background image */}
         <Image
           src="/bg_exchange.jpg" // replace with your actual image
@@ -120,7 +120,7 @@ export default function JCIExchangePage() {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-4 border-[#56BDA3] text-[#56BDA3] hover:bg-[#56BDA3] hover:text-white bg-transparent rounded-full shadow-lg hover:shadow-xl transition-all"
+              className="text-lg px-8 py-4  bg-transparent hover:bg-[#3bac90] hover:text-white rounded-full shadow-lg hover:shadow-xl transition-all"
             >
               🎉 Join the Fun
               <Users className="ml-2 w-5 h-5" />
@@ -239,25 +239,23 @@ export default function JCIExchangePage() {
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
                   {/* Morning */}
-                  <p className="font-medium text-lg text-center"> Morning </p>
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Morning
+                  </p>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#0097D7] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">
                         Arrival of international participants
                       </p>
-                      {/* <p className="text-xs text-gray-600">Welcome to Sousse</p> */}
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#3A67B1] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">
                         Check-in at hotel & welcome package distribution
                       </p>
-                      {/* <p className="text-xs text-gray-600">
-                        Official event launch
-                      </p> */}
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -266,13 +264,12 @@ export default function JCIExchangePage() {
                       <p className="font-medium text-sm">
                         Casual networking breakfast
                       </p>
-                      {/* <p className="text-xs text-gray-600">
-                        Medina, Ribat, Port El Kantaoui
-                      </p> */}
                     </div>
                   </div>
                   {/* Afternoon */}
-                  <p className="font-medium text-lg text-center"> Afternoon </p>
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Afternoon
+                  </p>
 
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
@@ -303,9 +300,11 @@ export default function JCIExchangePage() {
                     </div>
                   </div>
                   {/* Evening : */}
-                  <p className="font-medium text-lg text-center"> Evening : </p>
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Evening
+                  </p>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#3A67B1]  rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">
                         Diner with past presidents and senators
@@ -332,14 +331,16 @@ export default function JCIExchangePage() {
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
+                  {/* Morning */}
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Morning
+                  </p>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#3A67B1] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">
-                        JCI Talks (TED-style)
-                      </p>
+                      <p className="font-medium text-sm">JCI Action Day</p>
                       <p className="text-xs text-gray-600">
-                        Inspiring presentations
+                        Community Impact Project: Tree planting
                       </p>
                     </div>
                   </div>
@@ -347,10 +348,46 @@ export default function JCIExchangePage() {
                     <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">
-                        Soft Skills Training
+                        Executive Board Meeting
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        JCI Future Collaboration Forum
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        Brainstorming session on joint projects & initiatives
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        Planning next steps for the next JCI Exchange
+                      </p>
+                    </div>
+                  </div>
+                  {/* Afternoon: */}
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Afternoon
+                  </p>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        International Training Session 1
                       </p>
                       <p className="text-xs text-gray-600">
-                        Professional development
+                        Business & entrepreneurship skills or soft skills
                       </p>
                     </div>
                   </div>
@@ -358,19 +395,31 @@ export default function JCIExchangePage() {
                     <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
                     <div>
                       <p className="font-medium text-sm">
-                        Business Training Sessions
-                      </p>
-                      <p className="text-xs text-gray-600">
-                        Practical workshops
+                        Round Table: Voices of Local Startups
                       </p>
                     </div>
                   </div>
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Evening
+                  </p>
+                  <p className="font-semibold text-lg text-center text-[#0097D7]">
+                    Panel Discussion & Best Practices Exchange
+                  </p>
+
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#0097D7] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#3A67B1] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">JCI Future Forum</p>
-                      <p className="text-xs text-gray-600">
-                        + Networking night
+                      <p className="font-medium text-sm">
+                        Sharing impactful JCI projects from different LOMs
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-[#3A67B1] rounded-full mt-2"></div>
+                    <div>
+                      <p className="font-medium text-sm">
+                        Discussions on collaboration opportunities
                       </p>
                     </div>
                   </div>
@@ -391,33 +440,55 @@ export default function JCIExchangePage() {
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Morning
+                  </p>
+                  <p className="font-semibold text-lg text-center text-[#0097D7]">
+                    Company Visit in Sousse
+                  </p>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#56BDA3] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
+
                     <div>
-                      <p className="font-medium text-sm">JCI Action Day</p>
+                      <p className="font-medium text-sm">
+                        Visit of the site of The Dräxlmaier Group
+                      </p>
                       <p className="text-xs text-gray-600">
-                        Community projects
+                        a globally operating automotive supplier headquartered
+                        in the town of Vilsbiburg in Lower Bavaria, Germany.
                       </p>
                     </div>
                   </div>
+
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Afternoon:
+                  </p>
+                  <p className="font-semibold text-lg text-center text-[#0097D7]">
+                    JCI Friendship – Social & Fun Activities
+                  </p>
+
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#0097D7] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">JCI Friendship</p>
-                      <p className="text-xs text-gray-600">
-                        Karaoke & escape room
+                      <p className="font-medium text-sm">
+                        International Karaoke Challenge
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-[#0097D7] rounded-full mt-2"></div>
                     <div>
-                      <p className="font-medium text-sm">Closing Ceremony</p>
-                      <p className="text-xs text-gray-600">
-                        Celebration & awards
+                      <p className="font-medium text-sm">
+                        Escape room or team-bonding games
                       </p>
                     </div>
                   </div>
+                  <p className="font-bold text-lg text-center text-[#EDBE38]">
+                    Evening
+                  </p>
+                  <p className="font-bold text-lg text-center text-black">
+                    Closing ceremony
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -435,24 +506,12 @@ export default function JCIExchangePage() {
               </CardHeader>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#EDBE38] rounded-full mt-2"></div>
-                    <div>
-                      <p className="font-medium text-sm">Hotel Checkout</p>
-                      <p className="text-xs text-gray-600">
-                        Final preparations
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-[#0A0F29] rounded-full mt-2"></div>
-                    <div>
-                      <p className="font-medium text-sm">Travel to Tunis</p>
-                      <p className="text-xs text-gray-600">
-                        World Congress journey
-                      </p>
-                    </div>
-                  </div>
+                  <p className="font-semibold text-lg text-center text-[#0097D7]">
+                    Check Out
+                  </p>
+                  <p className="font-semibold text-lg text-center text-[#0097D7]">
+                    Departure to Tunis city to the world congress
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -492,7 +551,7 @@ export default function JCIExchangePage() {
                         🎉 Bring Your Squad & Save!
                       </h4>
                       <p className="text-gray-600 mb-2">
-                        Bring 15+ friends from your LOM and we'll treat{" "}
+                        Bring 15+ friends from your LOM and we'll treat
                         <strong>5 of you to free accommodation!</strong>
                         The more the merrier!
                       </p>
@@ -732,13 +791,6 @@ export default function JCIExchangePage() {
                   key={i}
                   className="p-4 hover:shadow-md transition-all hover:scale-105 bg-white"
                 >
-                  {/* <Image
-                    src={`/placeholder.svg?height=80&width=150&query=Gold Partner ${i}`}
-                    alt={`Gold Partner ${i}`}
-                    width={150}
-                    height={80}
-                    className="opacity-70 hover:opacity-100 transition-opacity mx-auto"
-                  /> */}{" "}
                   <NextPlaceholderImage
                     text={`Gold Partner ${i}`}
                     alt={`Gold Partner ${i}`}
@@ -1040,7 +1092,9 @@ export default function JCIExchangePage() {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-[#56BDA3]" />
-                  <span className="text-gray-300">jci.sousse.ong@gmzil.com</span>
+                  <span className="text-gray-300">
+                    jci.sousse.ong@gmzil.com
+                  </span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-[#56BDA3]" />
@@ -1074,7 +1128,6 @@ export default function JCIExchangePage() {
                 >
                   <Linkedin className="w-4 h-4" />
                 </Link>
-              
               </div>
             </div>
           </div>
