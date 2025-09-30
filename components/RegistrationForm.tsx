@@ -1,42 +1,82 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useState } from "react"
+import { z } from "zod"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+// ✅ Define schema with Zod
+const RegistrationSchema = z.object({
+  name: z.string().min(1, "Full name is required"),
+  lom: z.string().min(1, "LOM is required"),
+  email: z.string().email("Invalid email format"),
+  participants: z
+    .string()
+    .min(1, "Number of participants is required")
+    .refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
+      message: "Participants must be a positive number",
+    }),
+})
 
 export default function RegistrationForm() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [errors, setErrors] = useState<Record<string, string>>({})
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault()
+    setLoading(true)
 
-    const form = e.currentTarget;
+    const form = e.currentTarget
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       lom: (form.elements.namedItem("lom") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      participants: (
-        form.elements.namedItem("participants") as HTMLInputElement
-      ).value,
-    };
-console.log("data ", data);
-    await fetch("/api/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+      participants: (form.elements.namedItem("participants") as HTMLInputElement).value,
+    }
 
-    setLoading(false);
-    alert("Registration submitted successfully ✅");
+    // ✅ Validate with Zod
+    const result = RegistrationSchema.safeParse(data)
+
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {}
+      result.error.issues.forEach((issue) => {
+        if (issue.path[0]) {
+          fieldErrors[issue.path[0].toString()] = issue.message
+        }
+      })
+      setErrors(fieldErrors)
+      setLoading(false)
+      return
+    }
+
+    setErrors({})
+
+    try {
+      const res = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(result.data),
+      })
+
+      if (res.ok) {
+        alert("Registration submitted successfully ✅")
+        form.reset() // ✅ Clear the form after success
+      } else {
+        alert("Failed to send registration ❌")
+      }
+    } catch (err) {
+      alert("An error occurred while submitting ❌")
+    }
+
+    setLoading(false)
   }
 
   return (
@@ -52,29 +92,38 @@ console.log("data ", data);
           <div className="space-y-2">
             <Label htmlFor="name">Full Name</Label>
             <Input id="name" placeholder="Enter your full name" />
+            {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
           </div>
+
           <div className="space-y-2">
             <Label htmlFor="lom">LOM (Local Organization)</Label>
             <Input id="lom" placeholder="Enter your LOM name" />
+            {errors.lom && <p className="text-red-500 text-sm">{errors.lom}</p>}
           </div>
+
           <div className="space-y-2">
             <Label htmlFor="email">Email Address</Label>
             <Input id="email" type="email" placeholder="Enter your email" />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="participants">Number of Participants</Label>
-            <Input
-              id="participants"
-              type="number"
-              placeholder="How many will attend?"
-            />
+            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
           </div>
 
-          <Button className="w-full bg-[#0097D7] hover:bg-[#3A67B1] text-white">
-            Submit Registration
+          <div className="space-y-2">
+            <Label htmlFor="participants">Number of Participants</Label>
+            <Input id="participants" type="number" placeholder="How many will attend?" />
+            {errors.participants && (
+              <p className="text-red-500 text-sm">{errors.participants}</p>
+            )}
+          </div>
+
+          <Button
+            type="submit"
+            className="w-full bg-[#0097D7] hover:bg-[#3A67B1] text-white"
+            disabled={loading}
+          >
+            {loading ? "Submitting..." : "Submit Registration"}
           </Button>
         </CardContent>
       </Card>
     </form>
-  );
+  )
 }
