@@ -33,6 +33,7 @@ import Link from "next/link";
 import NextPlaceholderImage from "@/components/NextPlaceholderImage";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import SousseCarousel from '@/components/SousseCarousel'
+import RegistrationForm from "@/components/RegistrationForm";
 export default function JCIExchangePage() {
   return (
     <div
@@ -610,7 +611,8 @@ export default function JCIExchangePage() {
             </div>
 
             {/* Registration Form */}
-            <div>
+            <RegistrationForm/>
+            {/* <div>
               <Card className="shadow-lg">
                 <CardHeader className="bg-gradient-to-r from-[#0097D7] to-[#3A67B1] text-white">
                   <CardTitle>Register Your LOM</CardTitle>
@@ -649,7 +651,7 @@ export default function JCIExchangePage() {
                   </Button>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
